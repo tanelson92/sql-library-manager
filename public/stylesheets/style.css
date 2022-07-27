@@ -11,6 +11,8 @@ body * {
   box-sizing:border-box;
 }
 
+h1 { color:#164C45; }
+
 a {
   color: #164C45;
   font-weight:bold;
