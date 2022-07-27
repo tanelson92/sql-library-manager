@@ -1,0 +1,42 @@
+extends layout
+
+
+block content
+  a(href="/" style="display:inline-block;")
+    h1= title
+  table
+    tr
+      td(style="width:75%;")
+        a(href="/books/new" class="sql-btn smb-2") Create New Book
+      td(style="width:25%;")
+          if search
+            span No Results Found - #{search}
+          div(class="sflex-container")
+            input(id="search-bar" class="sflex-even" type="text" name="query" placeholder="Find a book")
+            div(id="search-btn" class="sql-btn") Search
+  table(class="sql-book-table")
+        thead 
+          tr 
+            td= "Title"
+            td= "Author"
+            td= "Genre"
+            td= "Year"
+        tbody
+          if books 
+            each book, index in books 
+              tr 
+                td
+                  a(href=`/books/${book.id}`)= book.title
+                td= book.author 
+                td= book.genre 
+                td= book.year
+          else 
+            tr 
+              td 
+              td No Results Found. 
+              td 
+              td
+  if pages
+    div(class="pagination")
+      each page in pages
+        a(href=`/books/page/${page}` class=(parseInt(page) === parseInt(currPage) ? 'currPage' : '') class="page")= page 

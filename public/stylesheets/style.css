@@ -1,0 +1,111 @@
+* {
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+body {
+  padding: 50px;
+  font: 16px;
+}
+
+body * {
+  box-sizing:border-box;
+}
+
+a {
+  color: #164C45;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+input {
+  padding:5px 10px;
+  border-radius:1px;
+  border:0;
+  background:rgba(0,0,0,0.1);
+}
+
+table {
+  width:100%;
+}
+
+/* SQL Buttons */
+
+.sql-btn {
+  cursor:pointer;
+  display:inline-block;
+  background:#164C45;
+  color:white;
+  font-weight:bold;
+  border-radius:1px;
+  padding:10px 15px;
+  text-decoration:none;
+  font-size: inherit;
+}
+
+/* SQL Book Table */
+
+.sql-book-table td {
+  padding:5px;
+}
+
+.sql-book-table thead td {
+  border-bottom: 2px solid #CC8D1A;
+  font-weight:900;
+}
+
+.sql-book-table tr:nth-child(even) td {
+  background:rgba(0,0,0,0.1);
+}
+
+/* SQL New book Table */
+
+.sql-table td:first-child {
+  padding-right:40px;
+}
+
+/* Errors */
+
+.errors {
+  color: red;
+}
+
+/* Pagination */
+
+.pagination {
+  display:block;
+  padding:10px;
+  text-align:center;
+}
+
+.page {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #164C45;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 0 1px;
+  border-radius: 1px;
+}
+
+.currPage {
+  background:#1D9988;
+}
+
+/* helpers */
+
+.smt-2 {
+  margin-top:10px;
+}
+
+.smb-2 {
+  margin-bottom:10px;
+}
+
+/* Flexbox */
+
+.sflex-container { display:flex; }
+.sflex-even { flex: 1; } 

@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1 Edit Details
+
+    include errors
+
+    form(action=`/books/${book.id}` method="post")
+        include form
+        input(style="display:block;" type="submit" class="sql-btn smt-2" value="Save Changes")
+        a(href="/" class="sql-btn smt-2") Cancel
+        a(href=`/books/${book.id}/delete` style="margin-left:20px;color:red;font-weight:400;font-size:0.8rem;") Delete

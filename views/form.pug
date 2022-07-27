@@ -1,0 +1,34 @@
+table(class="sql-table")
+
+    tr
+        td 
+            label(for="title") Title
+        td
+            if book
+                input(id="title" name="title" placeholder="Title" type="text" value=book.title)
+            else
+                input(id="title" name="title" placeholder="Title" type="text") 
+    tr
+        td 
+            label(for="author") Author
+        td
+            if book
+                input(id="author" name="author" placeholder="Author" type="text" value=book.author)
+            else 
+                input(id="author" name="author" placeholder="Author" type="text")
+    tr
+        td 
+            label(for="genre") Genre
+        td
+            if book
+                input(id="genre" name="genre" placeholder="Genre" value=book.genre type="text")
+            else 
+                input(id="genre" name="genre" placeholder="Genre" type="text")
+    tr
+        td 
+            label(for="year") Year
+        td
+            if book
+                input(id="year" name="year" placeholder="Year" value=book.year type="text")
+            else 
+                input(id="year" name="year" placeholder="Year" type="text")

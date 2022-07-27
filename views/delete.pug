@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+    h1 Delete Book 
+    p Are you sure you want to delete 
+        span(style="font-weight:bold;") #{book.title}?
+    form(action=`/books/${book.id}/delete` method="post")
+        input(type="submit" class="sql-btn" value=`Delete Book` style="margin: 0 10px 0 0;")
+        a(href="/" class="sql-btn") Cancel

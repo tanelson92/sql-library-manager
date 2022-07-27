@@ -1,0 +1,11 @@
+extends layout
+
+block content 
+    h1= title
+
+    include errors
+
+    form(action="/books/new" method="post")
+        include form
+        input(style="display:block;" type="submit" class="sql-btn smt-2" value="Create New Book")
+        a(href="/" class="sql-btn smt-2") Cancel
